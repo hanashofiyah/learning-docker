@@ -7,7 +7,7 @@
 - Run a new container
   1. Melalui CMD
   **docker run -d -p 8080:80 --name welcome1 docker/welcome-to-docker**
-  ![image](https://github.com/hanashofiyah/learning-docker/assets/104729134/7e345194-50c6-409b-8a5b-8258fa9603e8)
+  ![image](https://github.com/hanashofiyah/learning-docker/assets/104729134/e2de955f-8a6d-48df-b2e5-850982617d9b)
   2. Melalui Docker Windows
   ![image](https://github.com/hanashofiyah/learning-docker/assets/104729134/2c44221c-45ed-40f6-9978-6a1e7df997b6)
 
