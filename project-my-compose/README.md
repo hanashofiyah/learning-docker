@@ -6,12 +6,10 @@ A. Prepare a single database "{username}_access",
 
 B. Use existing golang project (from Project 1) that serve http and try to connect to postgres (or any) databases with additional:
   - Path "/ping", Do ping to database and show the result
-    ![image](https://github.com/hanashofiyah/learning-docker/assets/104729134/440bc9f8-319c-4e3a-9829-990cbec9a61c)
-    ![image](https://github.com/hanashofiyah/learning-docker/assets/104729134/a6d6a0bb-7c20-4c20-97e9-8d87cf947d45)
-
   - Output or return to browser as string or html Success = "Pong!", Failed = "Ouch!”
   - Print to console or log Success = "Ping successful", Failed = "Ping failed"
-    
+    ![image](https://github.com/hanashofiyah/learning-docker/assets/104729134/440bc9f8-319c-4e3a-9829-990cbec9a61c)
+    ![image](https://github.com/hanashofiyah/learning-docker/assets/104729134/a6d6a0bb-7c20-4c20-97e9-8d87cf947d45)
   - Insert or record a new data timestamp with "NOW()" or current timestamp whenever /ping accessed. E.g., new record current timestamp 2024-01-31 19:55:55
     ![image](https://github.com/hanashofiyah/learning-docker/assets/104729134/ae13630b-7870-4ff0-82fe-6e991f0380dd)
     
