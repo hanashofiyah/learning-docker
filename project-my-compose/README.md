@@ -14,10 +14,20 @@ B. Use existing golang project (from Project 1) that serve http and try to conne
   - Start HTTP on port 77 (or 78 if your chrome blocked the port)
 
 C. Create Dockerfile to build and run your golang project
-  ![image](https://github.com/hanashofiyah/learning-docker/assets/104729134/9ae19a1f-f3ef-4761-8213-cd39fa578c10)
+**dockerfile**
+![image](https://github.com/hanashofiyah/learning-docker/assets/104729134/512d014f-1c59-4bf7-baff-c694b337bb37)
+
+**build**
+![image](https://github.com/hanashofiyah/learning-docker/assets/104729134/71ae471d-fe71-45dc-924d-42c45b6298d2)
+
+**run**
+![image](https://github.com/hanashofiyah/learning-docker/assets/104729134/d865e435-584e-40b5-ac5f-bfcedac2f1fb)
+
+
 
 D. Create docker-compose.yml and instruct to run 2 containers
   - Golang Project (container name: "gosvc_container"), expose container port 77 (or 78) to host port 4331 Postgres image postgres:latest (container name: "dbsvc_container")
+  - 
   - Pastikan env postgres database "{username}_access"
 
 E. Make sure the golang project can connect to postgresql and postgresql data is persistent 
