@@ -1,0 +1,54 @@
+version: '3.9'
+
+#compose-name
+name: project-my-compose
+
+services:
+  app: 
+    container_name: gosvc_container
+    environment:
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASS}
+      - DB_DB=${DB_NAME}
+      - DB_HOST=${DB_HOST}
+      - DB_PORT=${DB_PORT}
+    build: 
+      context: ./project-my-docker-file/
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    depends_on:
+      postgresdb:
+        condition: service_healthy
+    ports:
+      - "4331:77"
+    networks:
+      - net_mycompose_hanashofiyah
+      
+  postgresdb:
+    image: postgres:latest
+    container_name: dbsvc_container
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASS}
+      - POSTGRES_DB=${DB_NAME}
+    env_file:
+      - .env
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -d ${DB_NAME} -U ${DB_USER}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    ports:
+      - '5432:5432'
+    volumes:
+      - vol_mycompose_hanashofiyah:/var/lib/postgresql/data
+    networks:
+      - net_mycompose_hanashofiyah
+
+volumes:
+  vol_mycompose_hanashofiyah:
+
+networks:
+  net_mycompose_hanashofiyah:
+    driver: bridge
