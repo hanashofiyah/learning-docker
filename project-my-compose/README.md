@@ -21,7 +21,8 @@ C. Create Dockerfile to build and run your golang project
 ![image](https://github.com/hanashofiyah/learning-docker/assets/104729134/71ae471d-fe71-45dc-924d-42c45b6298d2)
 
 **run**
-![image](https://github.com/hanashofiyah/learning-docker/assets/104729134/d865e435-584e-40b5-ac5f-bfcedac2f1fb)
+![image](https://github.com/hanashofiyah/learning-docker/assets/104729134/b5363b30-fb65-4bfc-9f80-1c65f2c076d5)
+
 
 
 
